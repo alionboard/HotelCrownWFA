@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvReservations = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +68,7 @@
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservations)).BeginInit();
             this.menuStrip.SuspendLayout();
             this.gboFilterBy.SuspendLayout();
@@ -78,22 +80,22 @@
             this.dgvReservations.AllowUserToDeleteRows = false;
             this.dgvReservations.AllowUserToResizeColumns = false;
             this.dgvReservations.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvReservations.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvReservations.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvReservations.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvReservations.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvReservations.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvReservations.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReservations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReservations.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvReservations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReservations.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -103,14 +105,14 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Turquoise;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvReservations.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Turquoise;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvReservations.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvReservations.Location = new System.Drawing.Point(12, 143);
             this.dgvReservations.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvReservations.MultiSelect = false;
@@ -118,7 +120,7 @@
             this.dgvReservations.ReadOnly = true;
             this.dgvReservations.RowHeadersVisible = false;
             this.dgvReservations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvReservations.Size = new System.Drawing.Size(988, 391);
+            this.dgvReservations.Size = new System.Drawing.Size(1101, 396);
             this.dgvReservations.TabIndex = 0;
             // 
             // Column1
@@ -186,7 +188,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip.Size = new System.Drawing.Size(1013, 24);
+            this.menuStrip.Size = new System.Drawing.Size(1126, 24);
             this.menuStrip.TabIndex = 1;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -252,7 +254,7 @@
             this.gboFilterBy.Controls.Add(this.label8);
             this.gboFilterBy.Location = new System.Drawing.Point(12, 77);
             this.gboFilterBy.Name = "gboFilterBy";
-            this.gboFilterBy.Size = new System.Drawing.Size(988, 52);
+            this.gboFilterBy.Size = new System.Drawing.Size(1101, 52);
             this.gboFilterBy.TabIndex = 18;
             this.gboFilterBy.TabStop = false;
             this.gboFilterBy.Text = "Filter By";
@@ -262,7 +264,7 @@
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(751, 31);
+            this.label9.Location = new System.Drawing.Point(864, 31);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(12, 13);
             this.label9.TabIndex = 47;
@@ -271,7 +273,7 @@
             // txtSearch
             // 
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.Location = new System.Drawing.Point(846, 20);
+            this.txtSearch.Location = new System.Drawing.Point(959, 20);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(100, 21);
             this.txtSearch.TabIndex = 42;
@@ -283,7 +285,7 @@
             this.lblCheckedOutNo.AutoSize = true;
             this.lblCheckedOutNo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCheckedOutNo.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCheckedOutNo.Location = new System.Drawing.Point(731, 31);
+            this.lblCheckedOutNo.Location = new System.Drawing.Point(844, 31);
             this.lblCheckedOutNo.Name = "lblCheckedOutNo";
             this.lblCheckedOutNo.Size = new System.Drawing.Size(22, 13);
             this.lblCheckedOutNo.TabIndex = 41;
@@ -296,7 +298,7 @@
             this.lblCheckedOutYes.AutoSize = true;
             this.lblCheckedOutYes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCheckedOutYes.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCheckedOutYes.Location = new System.Drawing.Point(699, 31);
+            this.lblCheckedOutYes.Location = new System.Drawing.Point(812, 31);
             this.lblCheckedOutYes.Name = "lblCheckedOutYes";
             this.lblCheckedOutYes.Size = new System.Drawing.Size(26, 13);
             this.lblCheckedOutYes.TabIndex = 40;
@@ -309,7 +311,7 @@
             this.lblCheckedOutAll.AutoSize = true;
             this.lblCheckedOutAll.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCheckedOutAll.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCheckedOutAll.Location = new System.Drawing.Point(669, 31);
+            this.lblCheckedOutAll.Location = new System.Drawing.Point(782, 31);
             this.lblCheckedOutAll.Name = "lblCheckedOutAll";
             this.lblCheckedOutAll.Size = new System.Drawing.Size(24, 13);
             this.lblCheckedOutAll.TabIndex = 39;
@@ -322,7 +324,7 @@
             this.lblCheckedInNo.AutoSize = true;
             this.lblCheckedInNo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCheckedInNo.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCheckedInNo.Location = new System.Drawing.Point(593, 31);
+            this.lblCheckedInNo.Location = new System.Drawing.Point(706, 31);
             this.lblCheckedInNo.Name = "lblCheckedInNo";
             this.lblCheckedInNo.Size = new System.Drawing.Size(22, 13);
             this.lblCheckedInNo.TabIndex = 38;
@@ -335,7 +337,7 @@
             this.lblCheckedInYes.AutoSize = true;
             this.lblCheckedInYes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCheckedInYes.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCheckedInYes.Location = new System.Drawing.Point(561, 31);
+            this.lblCheckedInYes.Location = new System.Drawing.Point(674, 31);
             this.lblCheckedInYes.Name = "lblCheckedInYes";
             this.lblCheckedInYes.Size = new System.Drawing.Size(26, 13);
             this.lblCheckedInYes.TabIndex = 35;
@@ -348,7 +350,7 @@
             this.lblCheckedInAll.AutoSize = true;
             this.lblCheckedInAll.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblCheckedInAll.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCheckedInAll.Location = new System.Drawing.Point(531, 31);
+            this.lblCheckedInAll.Location = new System.Drawing.Point(644, 31);
             this.lblCheckedInAll.Name = "lblCheckedInAll";
             this.lblCheckedInAll.Size = new System.Drawing.Size(24, 13);
             this.lblCheckedInAll.TabIndex = 33;
@@ -360,7 +362,7 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(668, 15);
+            this.label5.Location = new System.Drawing.Point(781, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 16);
             this.label5.TabIndex = 32;
@@ -371,7 +373,7 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(535, 15);
+            this.label4.Location = new System.Drawing.Point(648, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 16);
             this.label4.TabIndex = 19;
@@ -426,7 +428,7 @@
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(797, 24);
+            this.label12.Location = new System.Drawing.Point(910, 24);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(50, 14);
             this.label12.TabIndex = 43;
@@ -437,7 +439,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(523, 31);
+            this.label6.Location = new System.Drawing.Point(636, 31);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(12, 13);
             this.label6.TabIndex = 44;
@@ -448,7 +450,7 @@
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(661, 31);
+            this.label7.Location = new System.Drawing.Point(774, 31);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(12, 13);
             this.label7.TabIndex = 45;
@@ -459,7 +461,7 @@
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(613, 31);
+            this.label8.Location = new System.Drawing.Point(726, 31);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(12, 13);
             this.label8.TabIndex = 46;
@@ -475,11 +477,12 @@
             this.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Orange;
             this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Location = new System.Drawing.Point(47, 538);
+            this.btnEdit.Location = new System.Drawing.Point(47, 543);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(30, 30);
             this.btnEdit.TabIndex = 17;
+            this.toolTip.SetToolTip(this.btnEdit, "Edit Selected Reservation");
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -493,11 +496,12 @@
             this.btnNew.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnNew.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNew.Location = new System.Drawing.Point(11, 538);
+            this.btnNew.Location = new System.Drawing.Point(11, 543);
             this.btnNew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(30, 30);
             this.btnNew.TabIndex = 16;
+            this.toolTip.SetToolTip(this.btnNew, "Create New Reservation");
             this.btnNew.UseVisualStyleBackColor = false;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
@@ -511,20 +515,28 @@
             this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gainsboro;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Location = new System.Drawing.Point(83, 538);
+            this.btnDelete.Location = new System.Drawing.Point(83, 543);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(30, 30);
             this.btnDelete.TabIndex = 15;
+            this.toolTip.SetToolTip(this.btnDelete, "Delete Selected Reservation");
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // toolTip
+            // 
+            this.toolTip.AutoPopDelay = 5000;
+            this.toolTip.InitialDelay = 100;
+            this.toolTip.IsBalloon = true;
+            this.toolTip.ReshowDelay = 100;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1013, 576);
+            this.ClientSize = new System.Drawing.Size(1126, 581);
             this.Controls.Add(this.gboFilterBy);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnNew);
@@ -535,6 +547,7 @@
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(882, 502);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hotel Crown";
@@ -586,6 +599,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }
 

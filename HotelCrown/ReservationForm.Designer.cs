@@ -549,6 +549,10 @@
             this.Controls.Add(this.gboService);
             this.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(552, 766);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(552, 766);
             this.Name = "ReservationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reservation";
