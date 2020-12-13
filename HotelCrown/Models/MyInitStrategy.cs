@@ -48,7 +48,6 @@ namespace HotelCrown.Models
             };
             context.Customers.AddRange(new Customer[] { customer1, customer2, customer3 });
 
-
         }
     }
 }

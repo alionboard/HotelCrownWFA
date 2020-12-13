@@ -44,6 +44,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnSaveService = new System.Windows.Forms.Button();
             this.gboService = new System.Windows.Forms.GroupBox();
+            this.btnCancelService = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.nudQuantity = new System.Windows.Forms.NumericUpDown();
+            this.txtServicePrice = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.gboReservationsService = new System.Windows.Forms.GroupBox();
             this.dgvService = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,11 +56,6 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRemoveService = new System.Windows.Forms.Button();
             this.btnAddService = new System.Windows.Forms.Button();
-            this.btnCancelService = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.nudQuantity = new System.Windows.Forms.NumericUpDown();
-            this.txtServicePrice = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnRemove = new System.Windows.Forms.Button();
             this.btnAddCustomer = new System.Windows.Forms.Button();
             this.chkCheckedIn = new System.Windows.Forms.CheckBox();
@@ -71,9 +71,9 @@
             this.lblReservation = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.gboService.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
             this.gboReservationsService.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvService)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
             this.gboStep2.SuspendLayout();
             this.gboStep1.SuspendLayout();
             this.gboStep3.SuspendLayout();
@@ -256,6 +256,59 @@
             this.gboService.Text = "Service";
             this.gboService.Visible = false;
             // 
+            // btnCancelService
+            // 
+            this.btnCancelService.Location = new System.Drawing.Point(134, 141);
+            this.btnCancelService.Name = "btnCancelService";
+            this.btnCancelService.Size = new System.Drawing.Size(62, 29);
+            this.btnCancelService.TabIndex = 42;
+            this.btnCancelService.Text = "Cancel";
+            this.btnCancelService.UseVisualStyleBackColor = true;
+            this.btnCancelService.Click += new System.EventHandler(this.btnCancelService_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(40, 106);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(65, 16);
+            this.label9.TabIndex = 55;
+            this.label9.Text = "Quantity";
+            // 
+            // nudQuantity
+            // 
+            this.nudQuantity.Location = new System.Drawing.Point(106, 104);
+            this.nudQuantity.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudQuantity.Name = "nudQuantity";
+            this.nudQuantity.Size = new System.Drawing.Size(90, 23);
+            this.nudQuantity.TabIndex = 41;
+            this.nudQuantity.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // txtServicePrice
+            // 
+            this.txtServicePrice.Location = new System.Drawing.Point(106, 73);
+            this.txtServicePrice.Name = "txtServicePrice";
+            this.txtServicePrice.ReadOnly = true;
+            this.txtServicePrice.Size = new System.Drawing.Size(90, 23);
+            this.txtServicePrice.TabIndex = 39;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(40, 76);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 16);
+            this.label2.TabIndex = 54;
+            this.label2.Text = "Price(€)";
+            // 
             // gboReservationsService
             // 
             this.gboReservationsService.Controls.Add(this.dgvService);
@@ -332,59 +385,6 @@
             this.btnAddService.Text = "Add";
             this.btnAddService.UseVisualStyleBackColor = true;
             this.btnAddService.Click += new System.EventHandler(this.btnAddService_Click);
-            // 
-            // btnCancelService
-            // 
-            this.btnCancelService.Location = new System.Drawing.Point(134, 141);
-            this.btnCancelService.Name = "btnCancelService";
-            this.btnCancelService.Size = new System.Drawing.Size(62, 29);
-            this.btnCancelService.TabIndex = 42;
-            this.btnCancelService.Text = "Cancel";
-            this.btnCancelService.UseVisualStyleBackColor = true;
-            this.btnCancelService.Click += new System.EventHandler(this.btnCancelService_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(40, 106);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 16);
-            this.label9.TabIndex = 55;
-            this.label9.Text = "Quantity";
-            // 
-            // nudQuantity
-            // 
-            this.nudQuantity.Location = new System.Drawing.Point(106, 104);
-            this.nudQuantity.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudQuantity.Name = "nudQuantity";
-            this.nudQuantity.Size = new System.Drawing.Size(90, 23);
-            this.nudQuantity.TabIndex = 41;
-            this.nudQuantity.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // txtServicePrice
-            // 
-            this.txtServicePrice.Location = new System.Drawing.Point(106, 73);
-            this.txtServicePrice.Name = "txtServicePrice";
-            this.txtServicePrice.ReadOnly = true;
-            this.txtServicePrice.Size = new System.Drawing.Size(90, 23);
-            this.txtServicePrice.TabIndex = 39;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 16);
-            this.label2.TabIndex = 54;
-            this.label2.Text = "Price(€)";
             // 
             // btnRemove
             // 
@@ -551,13 +551,13 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ReservationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ReservationForm";
+            this.Text = "Reservation";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
             this.gboService.ResumeLayout(false);
             this.gboService.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
             this.gboReservationsService.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvService)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
             this.gboStep2.ResumeLayout(false);
             this.gboStep2.PerformLayout();
             this.gboStep1.ResumeLayout(false);
