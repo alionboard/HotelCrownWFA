@@ -13,15 +13,17 @@ namespace HotelCrown.Models
 
         [Key]
         public int Id { get; set; }
-        [ForeignKey("Reservation")]
-        public int ReservationId { get; set; }
-        [ForeignKey("Service")]
-        public int ServiceId { get; set; }
+        public int? ReservationId { get; set; }
+        
+        public int? ServiceId { get; set; }
+
         public string ServiceName { get; set; }
         public decimal UnitPrice { get; set; }
         public int Quantity { get; set; }
+        [ForeignKey("ReservationId")]
 
         public virtual Reservation Reservation { get; set; }
+        [ForeignKey("ServiceId")]
         public virtual Service Service { get; set; }
     }
 }

@@ -92,10 +92,6 @@ namespace HotelCrown
 
         private void FillRooms()
         {
-            //uymayanlar bu listeleye
-            //var list = db.Reservations.ToList().Where(x => (x.CheckInDate.Date >= dtpCheckInDate.Value.Date && x.CheckInDate.Date < dtpCheckOutDate.Value.Date)
-            //|| (x.CheckOutDate.Date > dtpCheckInDate.Value.Date && x.CheckOutDate.Date <= dtpCheckOutDate.Value.Date)
-            //).Select(x => x.Room).ToList();
 
             var list = db.Reservations.ToList().Where(x => !(x.CheckInDate.Date < dtpCheckInDate.Value.Date && x.CheckOutDate.Date <= dtpCheckInDate.Value.Date)
             && !(x.CheckInDate.Date >= dtpCheckOutDate.Value.Date && x.CheckOutDate.Date > dtpCheckOutDate.Value.Date)
@@ -122,25 +118,13 @@ namespace HotelCrown
                 }
             }
         }
-        private void FillCustomers()
-        {
-            var list = db.Customers.ToList().Where(x => x.Reservations.All(y => (y.CheckInDate.Date < dtpCheckInDate.Value.Date && y.CheckOutDate.Date <= dtpCheckInDate.Value.Date)
-            || (y.CheckOutDate.Date >= dtpCheckInDate.Value.Date && y.CheckOutDate.Date > dtpCheckOutDate.Value.Date))).ToList();
-            dgvCustomer.DataSource = list;
-            custList = db.Customers.ToList().Where(x => x.Reservations.All(y => y.CheckOutDate < dtpCheckOutDate.Value.Date)).ToList();
-
-        }
 
         private void chkCheckedIn_CheckedChanged(object sender, EventArgs e)
         {
             if (chkCheckedIn.Checked)
-            {
                 dtpCheckedInTime.Enabled = true;
-            }
             else
-            {
                 dtpCheckedInTime.Enabled = false;
-            }
         }
 
         private void chkCheckedOut_CheckedChanged(object sender, EventArgs e)
@@ -177,9 +161,7 @@ namespace HotelCrown
             if (lblStep2.Text == "Select Customer")
             {
                 if (dgvCustomer.SelectedRows.Count < 1)
-                {
                     return;
-                }
 
                 selectedCust.Add((Customer)dgvCustomer.SelectedRows[0].DataBoundItem);
                 custList.Remove((Customer)dgvCustomer.SelectedRows[0].DataBoundItem);
@@ -216,13 +198,10 @@ namespace HotelCrown
             else
             {
                 if (dgvCustomer.SelectedRows.Count < 1)
-                {
                     return;
-                }
                 if (selectedRes == null)
-                {
                     isFirstTime = true;
-                }
+
                 selectedCust.Clear();
                 dgvCustomer.DataSource = selectedCust.ToList();
             }
@@ -260,9 +239,7 @@ namespace HotelCrown
             {
                 List<ReservationService> rsList = selectedRes.ReservationServices.ToList();
                 foreach (var item in rsList)
-                {
                     totalServicePrice += item.Quantity * item.UnitPrice;
-                }
             }
             
 
@@ -270,9 +247,7 @@ namespace HotelCrown
             decimal totalPrice = (room.Price * dayCount)+totalServicePrice;
 
             if (selectedRes == null)
-            {
                 db.Reservations.Add(new Reservation { CheckInDate = checkInDate, CheckOutDate = checkOutDate, Room = room, TotalPrice = totalPrice, Customers = selectedCust.ToList(), CheckedInTime = checkedIn, CheckedOutTime = checkedOut });
-            }
             else
             {
                 selectedRes.CheckInDate = checkInDate;
@@ -356,34 +331,7 @@ namespace HotelCrown
             }
 
         }
-        private void btnEditService_Click(object sender, EventArgs e)
-        {
-            if (dgvService.Rows.Count < 1)
-            {
-                return;
-            }
-            gboService.Visible = true;
-            gboReservationsService.Visible = false;
-            if (cboService.Items.Count < 1)
-            {
-                MessageBox.Show("No service found.");
-                return;
-            }
-            ReservationService selectedRS = (ReservationService)dgvService.Rows[0].DataBoundItem;
-
-            for (int i = 0; i < cboService.Items.Count; i++)
-            {
-                cboService.SelectedIndex = i;
-                Service ser = (Service)cboService.SelectedItem;
-                if (ser.Id == selectedRS.ServiceId)
-                {
-                    cboService.SelectedIndex = i;
-                    return; ;
-                }
-            }
-
-
-        }
+        
         private void btnCancelService_Click(object sender, EventArgs e)
         {
             gboService.Visible = false;
@@ -408,7 +356,7 @@ namespace HotelCrown
 
         private void cboService_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboService.Items.Count > 1)
+            if (cboService.Items.Count >= 1)
             {
                 Service service = (Service)cboService.SelectedItem;
                 txtServicePrice.Text = service.UnitPrice.ToString();
@@ -417,10 +365,7 @@ namespace HotelCrown
 
         private void cboRoom_SelectedIndexChanged(object sender, EventArgs e)
         {
-
                 CalculatePrice();
-
-
         }
 
         protected virtual void WhenReservationChanged(EventArgs args)
@@ -434,15 +379,12 @@ namespace HotelCrown
         private void btnRemoveService_Click(object sender, EventArgs e)
         {
             if (dgvService.Rows.Count < 1)
-            {
                 return;
-            }
             ReservationService selectedRS = (ReservationService)dgvService.Rows[0].DataBoundItem;
-            //selectedRes.ReservationServices.Remove(selectedRS);
-            db.ReservationServices.Remove(selectedRS);
+            db.ReservationServices.Find(selectedRS.Id).Reservation=null;
+            selectedRes.ReservationServices.Remove(selectedRS);
             FillServices();
             CalculatePrice();
-
 
         }
     }

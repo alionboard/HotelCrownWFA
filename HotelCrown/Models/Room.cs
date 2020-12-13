@@ -18,9 +18,6 @@ namespace HotelCrown.Models
         public decimal Price { get; set; }
         public virtual ICollection<Feature>Features { get; set; }
 
-        public static implicit operator Room(bool v)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

@@ -138,6 +138,8 @@ namespace HotelCrown
             using (var db = new HotelContext())
             {
                 Service service = db.Services.Find(lst.SelectedValue);
+                List<ReservationService> list = db.ReservationServices.ToList().Where(x => x.Service == service).ToList();
+                list.ForEach(x=>x.Service=null);
                 db.Services.Remove(service);
                 db.SaveChanges();
                 int index = lst.SelectedIndex;
